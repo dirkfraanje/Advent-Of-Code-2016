@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Advent of Code 2016</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <script src="script.js"></script>
+    <div class="main">
+            <form action="/" class="main-item" id="mainForm">
+                <p>Choose a day</p>
+                <div class="item">
+                    <label for="day">Day<span>*</span></label>
+                    <input id="day" type="number" name="day" min="1" max="26" placeholder="1" required/>
+                </div>
+                <div class="question">
+                    <label>Choose a part<span>*</span></label>
+                    <div class="question-answer">
+                        <div>
+                            <input type="radio" value="none" id="radio_1" name="part" checked/>
+                            <label for="radio_1" class="radio"><span>1</span></label>
+                        </div>
+                        <div>
+                            <input type="radio" value="none" id="radio_2" name="part" />
+                            <label for="radio_2" class="radio"><span>2</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-block">
+                    <button type="submit" href="/">EXECUTE</button>
+                </div>
+
+            </form>
+        <div id="input" class="main-item">
+            <textarea rows="20" form="mainForm" id="dayinput" required></textarea>
+        </div>
+        <div id="output" class="main-item">Test</div>
+    </div>
+    <script src="day3.js"></script>
 </body>
+
 </html>

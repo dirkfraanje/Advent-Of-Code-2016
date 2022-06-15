@@ -10,39 +10,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
     <div class="main">
-            <form action="/" class="main-item" id="mainForm">
-                <p>Choose a day</p>
-                <div class="item">
-                    <label for="day">Day<span>*</span></label>
-                    <input id="day" type="number" name="day" min="1" max="26" placeholder="1" required/>
-                </div>
-                <div class="question">
-                    <label>Choose a part<span>*</span></label>
-                    <div class="question-answer">
-                        <div>
-                            <input type="radio" value="none" id="radio_1" name="part" checked/>
-                            <label for="radio_1" class="radio"><span>1</span></label>
-                        </div>
-                        <div>
-                            <input type="radio" value="none" id="radio_2" name="part" />
-                            <label for="radio_2" class="radio"><span>2</span></label>
-                        </div>
+        <form class="main-item" id="mainForm" onsubmit="()=>{}; return false;">
+            <p>Choose a day</p>
+            <div class="item">
+                <label for="day">Day<span>*</span></label>
+                <input id="day" value="3" type="number" name="day" min="1" max="26" placeholder="1" required />
+            </div>
+            <div class="question">
+                <label>Choose a part<span>*</span></label>
+                <div class="question-answer">
+                    <div>
+                        <input type="radio" value="none" id="radio_1" name="part" checked />
+                        <label for="radio_1" class="radio"><span>1</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" value="none" id="radio_2" name="part" />
+                        <label for="radio_2" class="radio"><span>2</span></label>
                     </div>
                 </div>
+            </div>
 
-                <div class="btn-block">
-                    <button type="submit" href="/">EXECUTE</button>
-                </div>
+            <div class="btn-block">
+                <button href="/">EXECUTE</button>
+            </div>
 
-            </form>
+        </form>
         <div id="input" class="main-item">
             <textarea rows="20" form="mainForm" id="dayinput" required></textarea>
         </div>
-        <div id="output" class="main-item">Test</div>
+
+            <div id="output" class="main-item"></div>
+      
     </div>
     <script src="day3.js"></script>
 </body>
